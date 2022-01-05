@@ -6,6 +6,10 @@
     font-size: 20px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #000;
     color: #fff;
@@ -18,8 +22,6 @@ body {
 }
 
 /*-------header-------*/
-.header {
-}
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -28,6 +30,7 @@ body {
     background-repeat: no-repeat;
     background-position: center 0;
 }
+
 .header-logo {
     height: 50px;
     width: 50px;
@@ -43,10 +46,6 @@ body {
 .header-navlang {
     display: flex;
     justify-content: center;
-}
-
-.header-navigation {
-    
 }
 
 .nav-list {
@@ -83,6 +82,7 @@ body {
     color: #BDAE82;
     transition: 0.3s;
 }
+
 .en:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;
@@ -102,15 +102,11 @@ body {
 }
 
 /*-------main-------*/
-.main {
-}
 .main-container {
     display: flex;
     flex-direction: column;
 }
-.section {
-    
-}
+
 .section-title {
     position: relative;
     background-color: #000;
@@ -136,7 +132,6 @@ body {
     background-image: url("./assets/img/bg.jpg");
     background-position: center -90px;
     background-repeat: no-repeat;
-
 }
 
 .hero-content {
@@ -165,10 +160,12 @@ h1 {
     line-height: 40px;
     transition: 0.3s;
 }
+
 .hire-me:hover {
     color: #fff;
     cursor: pointer;
 }
+
 .skills-container {
     display: flex;
     flex-direction: column;
@@ -190,24 +187,23 @@ h1 {
     width: 1400px;
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid red; */
 }
+
 .skills-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 320px;
     height: 240px;
-    /* border: 1px solid green; */
 }
-.photo-item {
-}
+
 .skills-items__photo-logo {
     margin-bottom: 50px;
     width: 62px;
     height: 50px;
     background: url("./assets/svg/camera.svg") no-repeat;
 }
+
 .skills-items__item-title {
     margin-bottom: 20px;
     line-height: 40px;
@@ -215,6 +211,7 @@ h1 {
     height: 40px;
     text-align: center;
 }
+
 .item-text {
     padding: 0;
     width: 280px;
@@ -223,24 +220,21 @@ h1 {
     text-align: center;
     line-height: 36px;
 }
-.video-item {
-}
+
 .skills-items__video-logo {
     margin-bottom: 50px;
     width: 60px;
     height: 50px;
     background: url("./assets/svg/video.svg") no-repeat;
 }
-.retouch-item {
-}
+
 .skills-items__retouch-logo {
     margin-bottom: 50px;
     width: 66px;
     height: 50px;
     background: url("./assets/svg/image.svg") no-repeat;
 }
-.audio-item {
-}
+
 .skills-items__audio-logo {
     margin-bottom: 50px;
     width: 32px;
@@ -255,10 +249,6 @@ h1 {
     padding: 102px 20px 0 20px;
 }
 
-.portfolio-title {
-}
-.section-title {
-}
 .portfolio {
     width: 220px;
 }
@@ -274,6 +264,7 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
+
 .button {
     width: 220px;
     height: 55px;
@@ -284,20 +275,17 @@ h1 {
     line-height: 40px;
     transition: 0.3s;
 }
+
 .button:hover {
     color: #fff;
     cursor: pointer;
 }
-.winter-button {
-}
-.spring-button {
-}
-.summer-button {
-}
+
 .autumn-button {
     background: #BDAE82;
     color: #000;
 }
+
 .portfolio-images {
     display: flex;
     flex-wrap: wrap;
@@ -307,6 +295,7 @@ h1 {
     width: 1400px;
     height: 1145px;
 }
+
 .portfolio-image {
     width: 450px;
     height: 560px;
@@ -319,10 +308,6 @@ h1 {
     padding: 100px 20px 0 20px;
 }
 
-.video-title {
-}
-.section-title {
-}
 .video {
     width: 154px;
 }
@@ -363,10 +348,6 @@ h1 {
     padding: 100px 20px 100px 20px;
 }
 
-.price-title {
-}
-.section-title {
-}
 .price {
     width: 142px;
 }
@@ -382,6 +363,7 @@ h1 {
     width: 1400px;
     margin-top: 60px;
 }
+
 .price-item {
     padding: 40px 43px 40px 43px;
     display: flex;
@@ -407,12 +389,14 @@ h1 {
     text-align: center;
     color: #BDAE82;
 }
+
 .price-text {
     margin-top: 20px;
     font-size: 18px;
     text-align: center;
     line-height: 36px;
 }
+
 .order-button {
     margin-top: 40px;
     width: 220px;
@@ -450,8 +434,6 @@ h1 {
     font-size: 40px;
     line-height: 80px;
 }
-.form {
-}
 
 .input {
     width: 450px;
@@ -471,17 +453,12 @@ h1 {
     font-size: 20px;
 }
 
-.email-input {
-    
-}
-.phone-input {
-
-}
 .message-input {
     height: 100px;
     resize: none;
     margin-bottom: 25px;
 }
+
 .send-message {
     width: 220px;
     height: 55px;
@@ -498,8 +475,6 @@ h1 {
 }
 
 /*-------footer-------*/
-.footer {
-}
 .footer-container {
     padding: 0 20px 0 20px;
     display: flex;
@@ -507,49 +482,63 @@ h1 {
     align-items: center;
     height: 150px;
 }
-.footer-data {
-}
+
 .year {
     margin: 0 20px;
 }
+
 .github-link {
     text-decoration: none;
     color: #fff;
     margin-right: 18px;
     transition: 0.3s;
 }
+
 .github-link:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
 }
+
 .rss-link {
     text-decoration: none;
     color: #fff;
     transition: 0.3s;
 }
+
 .rss-link:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
 }
+
 .footer-social {
-    display: flex;
-    justify-content: space-between;
     width: 188px;
 }
-.social-link {
+
+.sotial-links {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.sotial-link {
+    display: block;
     width: 32px;
     height: 32px;
 }
+
 .inst-link {
     background: url("./assets/svg/inst.svg") no-repeat;
     transition: 0.3s;
 }
+
 .face-link {
     background: url("./assets/svg/fb.svg") no-repeat;
     transition: 0.3s;
 }
+
 .tw-link {
     background: url("./assets/svg/tw.svg") no-repeat;
     transition: 0.3s;
 }
+
 .pint-link {
     background: url("./assets/svg/pinterest.svg") no-repeat;
     transition: 0.3s;
@@ -559,14 +548,17 @@ h1 {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;
 }
+
 .face-link:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;
 }
+
 .tw-link:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;
 }
+
 .pint-link:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;

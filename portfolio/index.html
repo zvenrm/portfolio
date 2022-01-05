@@ -18,11 +18,11 @@
             <div class="header-navlang">
                 <div class="header-navigation">
                     <ul class="nav-list">
-                        <li class="nav-item"><a class="nav-link" href="#">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Price</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#price">Price</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
                     </ul>
                 </div>
                 <div class="header-lang">
@@ -47,7 +47,7 @@
             <section class="section">
                 <div class="skills-container">
                     <div class="skills-title">
-                        <h2 class="section-title skills">Skills</h2>
+                        <h2 class="section-title skills" id="skills">Skills</h2>
                     </div>
                     <div class="skills-items">
                         <div class="skills-item photo-item">
@@ -76,7 +76,7 @@
             <section class="section">
                 <div class="portfolio-container">
                     <div class="portfolio-title">
-                        <h2 class="section-title portfolio">Portfolio</h2>
+                        <h2 class="section-title portfolio" id="portfolio">Portfolio</h2>
                     </div>
                     <div class="portfolio-buttons">
                         <button class="button winter-button">Winter</button>
@@ -97,7 +97,7 @@
             <section class="section">
                 <div class="video-container">
                     <div class="video-title">
-                        <h2 class="section-title video">Video</h2>
+                        <h2 class="section-title video" id="video">Video</h2>
                     </div>
                     <div class="video-block">
                         <button class="video-button"></button>
@@ -107,7 +107,7 @@
             <section class="section">
                 <div class="price-container">
                     <div class="price-title">
-                        <h2 class="section-title price">Price</h2>
+                        <h2 class="section-title price" id="price">Price</h2>
                     </div>
                     <div class="price-items">
                         <div class="price-item">
@@ -134,8 +134,8 @@
             <section class="section">
                 <div class="contacts-container">
                     <div class="contacts-content">
-                        <h2 class="contacts-title">Contact me</h2>
-                        <form action="" class="form">
+                        <h2 class="contacts-title" id="contacts">Contact me</h2>
+                        <form class="form" method="post">
                             <input class="input email-input" type="email" name="email" placeholder="E-mail">
                             <input class="input phone-input" type="tel" name="phone" placeholder="Phone">
                             <textarea class="input message-input" name="textarea" placeholder="Message"></textarea>
@@ -149,14 +149,16 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-data">
-                <span>©</span><span class="year">2022</span><a class="github-link" href="https://github.com/zvenrm">github</a>
+                <span>©</span><span class="year">2022</span><a class="github-link" href="https://github.com/zvenrm" target="_blank">github</a>
             </div>
-            <a href="#" class="rss-link">Rolling Scopes School</a>
+            <a href="https://rs.school/js-stage0/" class="rss-link" target="_blank">Rolling Scopes School</a>
             <div class="footer-social">
-                <div class="social-link inst-link"></div>
-                <div class="social-link face-link"></div>
-                <div class="social-link tw-link"></div>
-                <div class="social-link pint-link"></div>
+                <ul class="sotial-links">
+                    <li class="sotial-item"><a href="#" class="sotial-link inst-link"></a></li>
+                    <li class="sotial-item"><a href="#" class="sotial-link face-link"></a></li>
+                    <li class="sotial-item"><a href="#" class="sotial-link tw-link"></a></li>
+                    <li class="sotial-item"><a href="#" class="sotial-link pint-link"></a></li>
+                </ul>
             </div>
         </div>
     </footer>
