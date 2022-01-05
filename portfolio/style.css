@@ -317,7 +317,72 @@ h1 {
 }
 
 .price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 100px 20px;
 }
+
+.price-title {
+}
+.section-title {
+}
+.price {
+    width: 142px;
+}
+
+.price::after {
+    bottom: 39px;
+    left: -279px;
+}
+
+.price-items {
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    margin-top: 60px;
+}
+.price-item {
+    padding: 40px 43px 40px 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    height: 505px;
+    border: 3px solid #BDAE82;
+}
+
+.price-item__title {
+    font-size: 28px;
+    font-family: Merriweather;
+    line-height: 56px;
+}
+
+.price-price {
+    margin-top: 20px;
+    font-family: Merriweather;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    color: #BDAE82;
+}
+.price-text {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 36px;
+}
+.order-button {
+    margin-top: 40px;
+    width: 220px;
+    height: 55px;
+    color: #000;
+    background-color: #BDAE82;
+    border: 0;
+    line-height: 40px;
+}
+
 .contacts-container {
 }
 
