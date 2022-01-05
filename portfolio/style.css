@@ -7,13 +7,13 @@
 }
 
 body {
-    /* background-color: #000; */
+    background-color: #000;
     color: #fff;
 }
 
 /*-------common header, main, footer container-------*/
 .container {
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
 }
 
@@ -79,19 +79,145 @@ body {
 .main {
 }
 .main-container {
+    display: flex;
+    flex-direction: column;
 }
 .section {
+    
 }
 .section-title {
+    position: relative;
+    background-color: #000;
+    color: #BDAE82;
+    font-family: Merriweather;
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
 }
+
+.section-title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 700px;
+    height: 2px;
+    background-color: #BDAE82;
+    z-index: -1;
+}
+
 .hero-container {
-    padding: 0 20px;
+    padding: 160px 20px 330px 80px;
     background-image: url("./assets/img/bg.jpg");
     background-position: center -90px;
     background-repeat: no-repeat;
+
 }
+
+.hero-content {
+    width: 500px;
+}
+
+h1 {
+    font-family: Merriweather;
+    font-size: 60px;
+    line-height: 120px;
+}
+
+.hero-text {
+    margin-top: 10px;
+    width: 470px;
+    line-height: 40px;
+}
+
+.hire-me {
+    margin-top: 25px;
+    width: 220px;
+    height: 55px;
+    background-color: #BDAE82;
+    border: 0;
+    text-align: center;
+    line-height: 40px;
+}
+
 .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 0 20px;
 }
+
+.skills {
+    width: 152px;
+}
+
+.skills::after {
+    bottom: 39px;
+    left: -274px;
+}
+
+.skills-items {
+    margin-top: 60px;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.skills-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    height: 240px;
+    /* border: 1px solid green; */
+}
+.photo-item {
+}
+.skills-items__photo-logo {
+    margin-bottom: 50px;
+    width: 62px;
+    height: 50px;
+    background: url("./assets/svg/camera.svg") no-repeat;
+}
+.skills-items__item-title {
+    margin-bottom: 20px;
+    line-height: 40px;
+    width: 280px;
+    height: 40px;
+    text-align: center;
+}
+.item-text {
+    padding: 0;
+    width: 280px;
+    height: 72px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 36px;
+}
+.video-item {
+}
+.skills-items__video-logo {
+    margin-bottom: 50px;
+    width: 60px;
+    height: 50px;
+    background: url("./assets/svg/video.svg") no-repeat;
+}
+.retouch-item {
+}
+.skills-items__retouch-logo {
+    margin-bottom: 50px;
+    width: 66px;
+    height: 50px;
+    background: url("./assets/svg/image.svg") no-repeat;
+}
+.audio-item {
+}
+.skills-items__audio-logo {
+    margin-bottom: 50px;
+    width: 32px;
+    height: 50px;
+    background: url("./assets/svg/mic.svg") no-repeat;
+}
+
 .portfolio-container {
 }
 .video-container {
