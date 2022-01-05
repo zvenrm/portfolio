@@ -449,10 +449,44 @@ h1 {
 .footer {
 }
 .footer-container {
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
 }
 .footer-data {
 }
-.rss-link {
+.year {
+    margin: 0 20px;
 }
-.footer-social-list {
+.github-link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 18px;
+}
+.rss-link {
+    text-decoration: none;
+    color: #fff;
+}
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    width: 188px;
+}
+.social-link {
+    width: 32px;
+    height: 32px;
+}
+.inst-link {
+    background: url("./assets/svg/inst.svg") no-repeat;
+}
+.face-link {
+    background: url("./assets/svg/fb.svg") no-repeat;
+}
+.tw-link {
+    background: url("./assets/svg/tw.svg") no-repeat;
+}
+.pint-link {
+    background: url("./assets/svg/pinterest.svg") no-repeat;
 }
