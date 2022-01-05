@@ -219,7 +219,64 @@ h1 {
 }
 
 .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 102px 20px 0 20px;
 }
+
+.portfolio-title {
+}
+.section-title {
+}
+.portfolio {
+    width: 220px;
+}
+
+.portfolio::after {
+    bottom: 39px;
+    left: -240px;
+}
+
+.portfolio-buttons {
+    margin-top: 60px;
+    width: 895px;
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    width: 220px;
+    height: 55px;
+    color: #BDAE82;
+    border: 2px solid #BDAE82;
+    background: #000;
+    text-align: center;
+    line-height: 40px;
+}
+.winter-button {
+}
+.spring-button {
+}
+.summer-button {
+}
+.autumn-button {
+    background: #BDAE82;
+    color: #000;
+}
+.portfolio-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-top: 60px;
+    width: 1400px;
+    height: 1145px;
+}
+.portfolio-image {
+    width: 450px;
+    height: 560px;
+}
+
 .video-container {
 }
 .price-container {
