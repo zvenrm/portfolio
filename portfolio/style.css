@@ -32,6 +32,12 @@ body {
     height: 50px;
     width: 50px;
     background: url("./assets/svg/logo.svg");
+    transition: 0.3s;
+}
+
+.header-logo:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
 }
 
 .header-navlang {
@@ -60,6 +66,12 @@ body {
 .nav-link {
     text-decoration: none;
     color: #fff;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
 }
 
 .header-lang span {
@@ -69,10 +81,24 @@ body {
 
 .en {
     color: #BDAE82;
+    transition: 0.3s;
+}
+.en:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
 }
 
 .slash {
     padding: 0 3px 0 3px;
+}
+
+.ru {
+    transition: 0.3s;
+}
+
+.ru:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
 }
 
 /*-------main-------*/
@@ -137,8 +163,12 @@ h1 {
     border: 0;
     text-align: center;
     line-height: 40px;
+    transition: 0.3s;
 }
-
+.hire-me:hover {
+    color: #fff;
+    cursor: pointer;
+}
 .skills-container {
     display: flex;
     flex-direction: column;
@@ -252,6 +282,11 @@ h1 {
     background: #000;
     text-align: center;
     line-height: 40px;
+    transition: 0.3s;
+}
+.button:hover {
+    color: #fff;
+    cursor: pointer;
 }
 .winter-button {
 }
@@ -298,6 +333,9 @@ h1 {
 }
 
 .video-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 60px;
     position: relative;
     width: 1400px;
@@ -305,15 +343,17 @@ h1 {
     background: url("./assets/img/video-player.jpg") no-repeat;
 }
 
-.video-block::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 288px;
-    left: 636px;
+.video-button {
     width: 130px;
     height: 130px;
     background: url("./assets/svg/Play_Unvisited.svg") no-repeat;
+    border: 0;
+    transition: 0.3s;
+}
+
+.video-button:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
 }
 
 .price-container {
@@ -381,6 +421,12 @@ h1 {
     background-color: #BDAE82;
     border: 0;
     line-height: 40px;
+    transition: 0.3s;
+}
+
+.order-button:hover {
+    color: #fff;
+    cursor: pointer;
 }
 
 .contacts-container {
@@ -443,6 +489,12 @@ h1 {
     background-color: #BDAE82;
     border: 0;
     line-height: 40px;
+    transition: 0.3s;
+}
+
+.send-message:hover {
+    color: #fff;
+    cursor: pointer;
 }
 
 /*-------footer-------*/
@@ -464,10 +516,18 @@ h1 {
     text-decoration: none;
     color: #fff;
     margin-right: 18px;
+    transition: 0.3s;
+}
+.github-link:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
 }
 .rss-link {
     text-decoration: none;
     color: #fff;
+    transition: 0.3s;
+}
+.rss-link:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
 }
 .footer-social {
     display: flex;
@@ -480,13 +540,34 @@ h1 {
 }
 .inst-link {
     background: url("./assets/svg/inst.svg") no-repeat;
+    transition: 0.3s;
 }
 .face-link {
     background: url("./assets/svg/fb.svg") no-repeat;
+    transition: 0.3s;
 }
 .tw-link {
     background: url("./assets/svg/tw.svg") no-repeat;
+    transition: 0.3s;
 }
 .pint-link {
     background: url("./assets/svg/pinterest.svg") no-repeat;
+    transition: 0.3s;
+}
+
+.inst-link:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
+}
+.face-link:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
+}
+.tw-link:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
+}
+.pint-link:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
 }
