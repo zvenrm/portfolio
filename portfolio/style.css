@@ -278,7 +278,44 @@ h1 {
 }
 
 .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 0 20px;
 }
+
+.video-title {
+}
+.section-title {
+}
+.video {
+    width: 154px;
+}
+
+.video::after {
+    bottom: 39px;
+    left: -273px;
+}
+
+.video-block {
+    margin-top: 60px;
+    position: relative;
+    width: 1400px;
+    height: 705px;
+    background: url("./assets/img/video-player.jpg") no-repeat;
+}
+
+.video-block::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 288px;
+    left: 636px;
+    width: 130px;
+    height: 130px;
+    background: url("./assets/svg/Play_Unvisited.svg") no-repeat;
+}
+
 .price-container {
 }
 .contacts-container {
