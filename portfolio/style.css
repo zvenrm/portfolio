@@ -17,7 +17,7 @@ body {
 
 /*-------common header, main, footer container-------*/
 .container {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -135,7 +135,7 @@ body {
 }
 
 .hero-content {
-    width: 500px;
+    max-width: 500px;
 }
 
 h1 {
@@ -184,17 +184,22 @@ h1 {
 
 .skills-items {
     margin-top: 60px;
-    width: 1400px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .skills-item {
+    margin-right: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 320px;
     height: 240px;
+}
+
+.skills-item:last-child {
+    margin-right: 0;
 }
 
 .skills-items__photo-logo {
@@ -260,12 +265,14 @@ h1 {
 
 .portfolio-buttons {
     margin-top: 60px;
-    width: 895px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .button {
+    margin-right: 5px;
     width: 220px;
     height: 55px;
     color: #BDAE82;
@@ -274,6 +281,16 @@ h1 {
     text-align: center;
     line-height: 40px;
     transition: 0.3s;
+}
+
+.button:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 935px) {
+    .button:last-child {
+        margin-top: 5px;
+    }
 }
 
 .button:hover {
@@ -292,13 +309,19 @@ h1 {
     justify-content: space-between;
     align-content: space-between;
     margin-top: 60px;
-    width: 1400px;
-    height: 1145px;
+    max-width: 1400px;
+    min-height: 1145px;
 }
 
+@media screen and (max-width: 1390px) {
+    .portfolio-images {
+        justify-content: space-around;
+    }
+} 
+
 .portfolio-image {
-    width: 450px;
-    height: 560px;
+    max-width: 450px;
+    height: auto;
 }
 
 .video-container {
@@ -322,15 +345,18 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
-    position: relative;
-    width: 1400px;
-    height: 705px;
-    background: url("./assets/img/video-player.jpg") no-repeat;
+    width: 100%;
+}
+
+.video-img {
+    width: 100%;
+    height: auto;
 }
 
 .video-button {
     width: 130px;
     height: 130px;
+    position: absolute;
     background: url("./assets/svg/Play_Unvisited.svg") no-repeat;
     border: 0;
     transition: 0.3s;
@@ -359,12 +385,13 @@ h1 {
 
 .price-items {
     display: flex;
-    justify-content: space-between;
-    width: 1400px;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 60px;
 }
 
 .price-item {
+    margin-right: 25px;
     padding: 40px 43px 40px 43px;
     display: flex;
     flex-direction: column;
@@ -372,6 +399,10 @@ h1 {
     width: 450px;
     height: 505px;
     border: 3px solid #BDAE82;
+}
+
+.price-item:last-child {
+    margin-right: 0;
 }
 
 .price-item__title {
