@@ -84,7 +84,7 @@ body {
 }
 
 .en:hover {
-    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    /* filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%); */
     cursor: pointer;
 }
 
