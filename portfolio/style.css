@@ -15,6 +15,10 @@ body {
     color: #fff;
 }
 
+.body-hidden {
+    overflow-y: hidden;
+}
+
 /*-------common header, main, footer container-------*/
 .container {
     max-width: 1440px;
@@ -652,7 +656,6 @@ h1 {
     .header-navlang {
         position: relative;
     }
-
     .header-navigation {
         padding: 135px 344px 463px 129px;
         position: fixed;
@@ -668,6 +671,7 @@ h1 {
 
     .navigation-open {
         transform: translateX(0);
+        box-shadow: -50px 0 200px #000;
     }
 
     .nav-link {
