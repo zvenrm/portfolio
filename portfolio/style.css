@@ -83,12 +83,11 @@ body {
 }
 
 .en {
-    color: #BDAE82;
     transition: 0.3s;
 }
 
 .en:hover {
-    /* filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%); */
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;
 }
 
@@ -102,6 +101,14 @@ body {
 
 .ru:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
+}
+
+.language-active {
+    color: #BDAE82;
+}
+
+.language-active:hover {
     cursor: pointer;
 }
 

@@ -1,3 +1,6 @@
+import i18Obj from './translate.js'
+//----------------------------------------------------
+
 const hamburger = document.querySelector('.header-burger');
 const navigation = document.querySelector('.header-navigation');
 
@@ -59,7 +62,11 @@ buttons.forEach(elem => {
 
 /*-------------------К О Н Е Ц---К А Р Т И Н О К--------------*/
 
+/*-------------------П Е Р Е В О Д-----------------------*/
 
+
+
+/*--------------К О Н Е Ц---П Е Р Е В О Д А-------------------*/
 
 
 
