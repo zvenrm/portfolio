@@ -82,26 +82,17 @@ body {
     font-weight: 700;
 }
 
-.en {
+.lang {
     transition: 0.3s;
 }
 
-.en:hover {
+.lang:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;
 }
 
 .slash {
     padding: 0 3px 0 3px;
-}
-
-.ru {
-    transition: 0.3s;
-}
-
-.ru:hover {
-    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
-    cursor: pointer;
 }
 
 .language-active {

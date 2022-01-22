@@ -64,6 +64,21 @@ buttons.forEach(elem => {
 
 /*-------------------П Е Р Е В О Д-----------------------*/
 
+const languages = document.querySelectorAll('.lang')
+const attributes = document.querySelectorAll('[data-]')
+
+function changeLangActive(event) {
+    languages.forEach(el => {
+        el.classList.remove('language-active')
+    })
+    event.target.classList.add('language-active')
+}
+
+
+languages.forEach(elem => {
+    elem.addEventListener('click', changeLangActive)
+})
+
 
 
 /*--------------К О Н Е Ц---П Е Р Е В О Д А-------------------*/
