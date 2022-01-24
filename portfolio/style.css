@@ -19,10 +19,6 @@ body {
     background-color: #fff;
 }
 
-.body-hidden {
-    overflow-y: hidden;
-}
-
 /*-------common header, main, footer container-------*/
 .container {
     max-width: 1440px;
