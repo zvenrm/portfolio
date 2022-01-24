@@ -11,8 +11,7 @@ function toggleMenu() {
 hamburger.addEventListener('click', toggleMenu);
 navigation.addEventListener('click', toggleMenu);
 
-
-/*------------------------К А Р Т И Н К И---------------------*/
+//------------------------К А Р Т И Н К И---------------------
 
 //кэш картинок
 const seasons = ['winter', 'spring', 'summer', 'autumn'];
@@ -60,9 +59,9 @@ buttons.forEach(elem => {
     elem.addEventListener('click', changeClassActive)
 })
 
-/*-------------------К О Н Е Ц---К А Р Т И Н О К--------------*/
+//-------------------К О Н Е Ц---К А Р Т И Н О К--------------
 
-/*-------------------П Е Р Е В О Д-----------------------*/
+//-------------------П Е Р Е В О Д-----------------------
 
 const languages = document.querySelectorAll('.lang')
 const attributes = document.querySelectorAll('[data-]')
@@ -81,7 +80,7 @@ languages.forEach(elem => {
 
 
 
-/*--------------К О Н Е Ц---П Е Р Е В О Д А-------------------*/
+//--------------К О Н Е Ц---П Е Р Е В О Д А-------------------
 
 
 
