@@ -208,6 +208,10 @@ h1 {
     width: 152px;
 }
 
+.skillsru {
+    width: 175px;
+}
+
 .skills::after {
     bottom: 39px;
     left: -274px;
@@ -287,6 +291,10 @@ h1 {
 
 .portfolio {
     width: 220px;
+}
+
+.portfolioru {
+    width: 255px;
 }
 
 .portfolio::after {
@@ -746,6 +754,10 @@ h1 {
         max-width: 390px;
     }
 
+    .hero-textru {
+        margin-bottom: 35px;
+    }
+
     .hire-me {
         margin: 0;
     }
@@ -765,6 +777,10 @@ h1 {
 
     .skills {
         max-width: 131px;
+    }
+
+    .skillsru {
+        max-width: 140px;
     }
 
     .skills::after {
@@ -806,6 +822,10 @@ h1 {
 
     .portfolio {
         max-width: 185px;
+    }
+
+    .portfolioru {
+        max-width: 200px;
     }
 
     .portfolio::after {
@@ -891,6 +911,10 @@ h1 {
 
     .price-item:last-child {
         margin: 0;
+    }
+
+    .price-text span {
+        font-size: 18px;
     }
 
     .contacts-container {

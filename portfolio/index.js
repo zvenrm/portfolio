@@ -64,20 +64,45 @@ buttons.forEach(elem => {
 //-------------------П Е Р Е В О Д-----------------------
 
 const languages = document.querySelectorAll('.lang')
-const attributes = document.querySelectorAll('[data-]')
+const attributes = document.querySelectorAll('[data-i18n]')
+
+function getTranslate(finalLang) {
+    attributes.forEach(elem => {
+        elem.textContent = finalLang[elem.dataset.i18n]
+        if (elem.placeholder) {
+            elem.placeholder = finalLang[elem.dataset.i18n]
+            elem.textContent = ''
+        }
+    })
+}
 
 function changeLangActive(event) {
     languages.forEach(el => {
         el.classList.remove('language-active')
     })
     event.target.classList.add('language-active')
+    if (event.target.textContent === 'en') {
+        getTranslate(i18Obj.en)
+        document.querySelector('.hero-text').classList.toggle('hero-textru')
+        document.querySelector('.skills').classList.toggle('skillsru')
+        document.querySelector('.portfolio').classList.toggle('portfolioru')
+    }
+    else {
+        getTranslate(i18Obj.ru)
+        document.querySelector('.hero-text').classList.toggle('hero-textru')
+        document.querySelector('.skills').classList.toggle('skillsru')
+        document.querySelector('.portfolio').classList.toggle('portfolioru')
+    }
 }
-
 
 languages.forEach(elem => {
     elem.addEventListener('click', changeLangActive)
 })
 
+
+
+
+console.log(attributes)
 
 
 //--------------К О Н Е Ц---П Е Р Е В О Д А-------------------
