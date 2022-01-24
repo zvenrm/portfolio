@@ -692,6 +692,10 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+    .body-hidden {
+        overflow: hidden;
+    }
+    
     h1 {
         min-width: 200px;
     }
@@ -732,6 +736,7 @@ h1 {
     .navigation-open {
         transform: translateX(0);
         box-shadow: -100px 0 200px -20px #000;
+        overflow: auto;
     }
 
     .nav-link {
