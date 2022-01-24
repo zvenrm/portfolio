@@ -107,14 +107,12 @@ function changeLangActive(event) {
     })
     event.target.classList.add('language-active')
     if (event.target.textContent === 'en') {
-        lang = 'en'
         getTranslate(i18Obj.en)
         document.querySelector('.hero-text').classList.toggle('hero-textru')
         document.querySelector('.skills').classList.toggle('skillsru')
         document.querySelector('.portfolio').classList.toggle('portfolioru')
     }
     else {
-        lang = 'ru'
         getTranslate(i18Obj.ru)
         document.querySelector('.hero-text').classList.toggle('hero-textru')
         document.querySelector('.skills').classList.toggle('skillsru')
@@ -140,12 +138,6 @@ const themeIcon = document.querySelector('.dark-icon')
 const itemsForTheme = ['.skills-container', '.portfolio-container', '.video-container', '.price-container']
 
 function toggleTheme() {
-    if (theme === 'light') {
-        theme = 'dark'
-    }
-    else {
-        theme = 'light'
-    }
     themeIcon.classList.toggle('light-icon')
     document.body.classList.toggle('light-body')
     itemsForTheme.forEach(elem => {
