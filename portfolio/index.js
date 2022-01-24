@@ -54,10 +54,34 @@ function changeClassActive(event) {
         el.classList.remove('button-active')
     })
     event.target.classList.add('button-active')
+    event.preventDefault;
+    //reset animation
+    event.target.classList.remove('animate');
+    
+    event.target.classList.add('animate');
+    setTimeout(function(){
+        event.target.classList.remove('animate');
+    },700);
 }
 
 buttons.forEach(elem => {
     elem.addEventListener('click', changeClassActive)
+})
+
+const animateButton = function(e) {
+
+    e.preventDefault;
+    //reset animation
+    e.target.classList.remove('animate');
+    
+    e.target.classList.add('animate');
+    setTimeout(function(){
+        e.target.classList.remove('animate');
+    },700);
+};
+
+document.querySelectorAll('.order-button').forEach(elem => {
+    elem.addEventListener('click', animateButton)
 })
 
 //-------------------К О Н Е Ц---К А Р Т И Н О К--------------
@@ -83,12 +107,14 @@ function changeLangActive(event) {
     })
     event.target.classList.add('language-active')
     if (event.target.textContent === 'en') {
+        lang = 'en'
         getTranslate(i18Obj.en)
         document.querySelector('.hero-text').classList.toggle('hero-textru')
         document.querySelector('.skills').classList.toggle('skillsru')
         document.querySelector('.portfolio').classList.toggle('portfolioru')
     }
     else {
+        lang = 'ru'
         getTranslate(i18Obj.ru)
         document.querySelector('.hero-text').classList.toggle('hero-textru')
         document.querySelector('.skills').classList.toggle('skillsru')
@@ -114,6 +140,12 @@ const themeIcon = document.querySelector('.dark-icon')
 const itemsForTheme = ['.skills-container', '.portfolio-container', '.video-container', '.price-container']
 
 function toggleTheme() {
+    if (theme === 'light') {
+        theme = 'dark'
+    }
+    else {
+        theme = 'light'
+    }
     themeIcon.classList.toggle('light-icon')
     document.body.classList.toggle('light-body')
     itemsForTheme.forEach(elem => {
@@ -138,5 +170,7 @@ themeIcon.addEventListener('click', toggleTheme)
 
 
 //--------------------К О Н Е Ц---Т Е М Ы------------------
+
+
 
 console.log('Вёрстка соответствует макету. Ширина экрана 768px 48/48\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки 15/15\nНа ширине экрана 768рх и меньше реализовано адаптивное меню 22/22');
