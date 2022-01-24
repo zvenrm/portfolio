@@ -4,11 +4,15 @@ const navigation = document.querySelector('.header-navigation');
 function toggleMenu() {
     hamburger.classList.toggle('navigation-open');
     navigation.classList.toggle('navigation-open');
-    /* document.body.classList.toggle('body-hidden'); */
+    document.body.classList.toggle('body-hidden');
 }
 
-hamburger.addEventListener('click', toggleMenu);
-navigation.addEventListener('click', toggleMenu);
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+    hamburger.addEventListener('click', toggleMenu);
+    navigation.addEventListener('click', toggleMenu);
+}
+
 
 
 

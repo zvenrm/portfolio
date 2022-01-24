@@ -15,9 +15,7 @@ body {
     color: #fff;
 }
 
-.body-hidden {
-    overflow-y: hidden;
-}
+
 
 /*-------common header, main, footer container-------*/
 .container {
@@ -633,6 +631,10 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+    .body-hidden {
+        overflow: hidden;
+    }
+
     h1 {
         min-width: 200px;
     }
@@ -665,6 +667,7 @@ h1 {
     .navigation-open {
         transform: translateX(0);
         box-shadow: -50px 0 200px #000;
+        overflow: auto;
     }
 
     .nav-link {
