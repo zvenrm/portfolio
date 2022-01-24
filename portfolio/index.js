@@ -107,8 +107,35 @@ console.log(attributes)
 
 //--------------К О Н Е Ц---П Е Р Е В О Д А-------------------
 
+//------------------Т Е М А--------------------------------
+
+const themeIcon = document.querySelector('.dark-icon')
+const itemsForTheme = ['.skills-container', '.portfolio-container', '.video-container', '.price-container']
+
+function toggleTheme() {
+    themeIcon.classList.toggle('light-icon')
+    document.body.classList.toggle('light-body')
+    itemsForTheme.forEach(elem => {
+        document.querySelector(elem).classList.toggle('light-theme')
+    })
+    document.querySelectorAll('.section-title').forEach(elem => {
+        elem.classList.toggle('title-light')
+    })
+    document.querySelectorAll('.button').forEach(elem => {
+        elem.classList.toggle('button-light')
+    })
+    document.querySelector('.header-navigation').classList.toggle('navigation-light')
+    document.querySelector('.header-burger').addEventListener('click', () => {
+        document.querySelectorAll('.burger-line').forEach(elem => {
+            elem.classList.toggle('line-light')
+        })
+    })
+}
+
+themeIcon.addEventListener('click', toggleTheme)
 
 
 
+//--------------------К О Н Е Ц---Т Е М Ы------------------
 
 console.log('Вёрстка соответствует макету. Ширина экрана 768px 48/48\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки 15/15\nНа ширине экрана 768рх и меньше реализовано адаптивное меню 22/22');

@@ -15,6 +15,10 @@ body {
     color: #fff;
 }
 
+.light-body {
+    background-color: #fff;
+}
+
 .body-hidden {
     overflow-y: hidden;
 }
@@ -77,6 +81,10 @@ body {
     cursor: pointer;
 }
 
+.header-lang {
+    margin-right: 30px;
+}
+
 .header-lang span {
     line-height: 50px;
     font-weight: 700;
@@ -103,6 +111,22 @@ body {
     cursor: pointer;
 }
 
+.dark-icon {
+    width: 45px;
+    height: 45px;
+    background: url("./assets/svg/night-theme.svg") no-repeat;
+    transition: 0.3s;
+}
+
+.dark-icon:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
+    cursor: pointer;
+}
+
+.light-icon {
+    background: url("./assets/svg/white-theme.svg") no-repeat;
+}
+
 .header-burger {
     width: 50px;
     height: 50px;
@@ -119,6 +143,10 @@ body {
     position: absolute;
     left: 0;
     transition: 0.5s;
+}
+
+.line-light {
+    background-color: #000;
 }
 
 .burger-line1 {
@@ -156,6 +184,15 @@ body {
     height: 2px;
     background-color: #BDAE82;
     z-index: -1;
+}
+
+.title-light {
+    background-color: #fff;
+    color: #000;
+}
+
+.title-light::after {
+    background-color: #000;
 }
 
 .hero-container {
@@ -326,6 +363,16 @@ h1 {
     margin-right: 0;
 }
 
+.button-light {
+    background-color: #fff;
+    color: #000;
+}
+
+.button-light:hover {
+    background-color: #BDAE82;
+    color: #fff;
+}
+
 @media (max-width: 935px) {
     .button:last-child {
         margin-top: 5px;
@@ -355,6 +402,9 @@ h1 {
 @media screen and (max-width: 1390px) {
     .portfolio-images {
         justify-content: space-around;
+    }
+    .portfolio-image {
+        margin-bottom: 10px;
     }
 } 
 
@@ -466,9 +516,12 @@ h1 {
 
 .price-text {
     margin-top: 20px;
-    font-size: 18px;
     text-align: center;
     line-height: 36px;
+}
+
+.price-text span {
+    font-size: 18px;
 }
 
 .order-button {
@@ -549,12 +602,14 @@ h1 {
 }
 
 /*-------footer-------*/
+
 .footer-container {
     padding: 0 20px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 150px;
+    background-color: #000;
 }
 
 .year {
@@ -638,6 +693,10 @@ h1 {
     cursor: pointer;
 }
 
+.light-theme {
+    color: #000;
+}
+
 @media screen and (max-width: 768px) {
     h1 {
         min-width: 200px;
@@ -668,9 +727,17 @@ h1 {
         transition: 0.5s;
     }
 
+    .navigation-light {
+        background-color: #fff;
+    }
+
+    .navigation-light a {
+        color: #000;
+    }
+
     .navigation-open {
         transform: translateX(0);
-        box-shadow: -50px 0 200px #000;
+        box-shadow: -100px 0 200px -20px #000;
     }
 
     .nav-link {
@@ -687,11 +754,15 @@ h1 {
     }
 
     .header-lang {
-        margin-right: 20px;
+        margin-right: 28px;
     }
 
     .slash {
-        margin-right: 10px;
+        margin-right: 5px;
+    }
+
+    .dark-icon {
+        margin-right: 30px;
     }
 
     .header-burger {
@@ -940,7 +1011,6 @@ h1 {
 
     .footer-container {
         padding: 28px 0 0 0;
-        max-width: 210px;
         flex-direction: column;
     }
 
