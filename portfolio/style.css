@@ -15,10 +15,6 @@ body {
     color: #fff;
 }
 
-.light-body {
-    background-color: #fff;
-}
-
 /*-------common header, main, footer container-------*/
 .container {
     max-width: 1440px;
@@ -1130,4 +1126,8 @@ h1 {
     .input {
         width: 100%;
     }
+}
+
+.light-body {
+    background-color: #fff;
 }
