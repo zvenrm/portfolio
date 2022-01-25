@@ -15,6 +15,30 @@ function getLocalStorage() {
             document.querySelector('.portfolio').classList.toggle('portfolioru')
         }
     }
+    if (localStorage.getItem('theme')){
+        const theme = localStorage.getItem('theme')
+        if (theme === 'light'){
+            const themeIcon = document.querySelector('.dark-icon')
+            const itemsForTheme = ['.skills-container', '.portfolio-container', '.video-container', '.price-container']
+            themeIcon.classList.toggle('light-icon')
+            document.body.classList.toggle('light-body')
+            itemsForTheme.forEach(elem => {
+                document.querySelector(elem).classList.toggle('light-theme')
+            })
+            document.querySelectorAll('.section-title').forEach(elem => {
+                elem.classList.toggle('title-light')
+            })
+            document.querySelectorAll('.button').forEach(elem => {
+                elem.classList.toggle('button-light')
+            })
+            document.querySelector('.header-navigation').classList.toggle('navigation-light')
+            document.querySelector('.header-burger').addEventListener('click', () => {
+                document.querySelectorAll('.burger-line').forEach(elem => {
+                    elem.classList.toggle('line-light')
+                })
+            })
+        }
+    }
 }
 window.addEventListener('load', getLocalStorage)
 
@@ -22,6 +46,11 @@ window.addEventListener('load', getLocalStorage)
 let lang;
 if (localStorage.getItem('lang') === 'ru'){
     lang = 'ru'
+}
+
+let theme;
+if (localStorage.getItem('theme') === 'light'){
+    theme = 'light'
 }
 
 const hamburger = document.querySelector('.header-burger');
@@ -162,7 +191,13 @@ console.log(attributes)
 const themeIcon = document.querySelector('.dark-icon')
 const itemsForTheme = ['.skills-container', '.portfolio-container', '.video-container', '.price-container']
 
-function toggleTheme() {
+function toggleTheme(e) {
+    if (!e.target.classList.contains('light-icon')){
+        theme = 'light'
+    }
+    else {
+        theme = 'dark'
+    }
     themeIcon.classList.toggle('light-icon')
     document.body.classList.toggle('light-body')
     itemsForTheme.forEach(elem => {
@@ -189,6 +224,7 @@ themeIcon.addEventListener('click', toggleTheme)
 //--------------------К О Н Е Ц---Т Е М Ы------------------
 function setLocalStorage() {
     localStorage.setItem('lang', lang);
+    localStorage.setItem('theme', theme);
 }
 window.addEventListener('beforeunload', setLocalStorage)
 
