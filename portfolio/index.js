@@ -1,5 +1,28 @@
 import i18Obj from './translate.js'
 //----------------------------------------------------
+function getLocalStorage() {
+    if(localStorage.getItem('lang')) {
+        const lang = localStorage.getItem('lang');
+        if (lang === 'ru'){
+            const languages = document.querySelectorAll('.lang')
+            languages.forEach(el => {
+                el.classList.remove('language-active')
+            })
+            languages[1].classList.add('language-active')
+            getTranslate(i18Obj.ru)
+            document.querySelector('.hero-text').classList.toggle('hero-textru')
+            document.querySelector('.skills').classList.toggle('skillsru')
+            document.querySelector('.portfolio').classList.toggle('portfolioru')
+        }
+    }
+}
+window.addEventListener('load', getLocalStorage)
+
+
+let lang;
+if (localStorage.getItem('lang') === 'ru'){
+    lang = 'ru'
+}
 
 const hamburger = document.querySelector('.header-burger');
 const navigation = document.querySelector('.header-navigation');
@@ -107,12 +130,14 @@ function changeLangActive(event) {
     })
     event.target.classList.add('language-active')
     if (event.target.textContent === 'en') {
+        lang = 'en'
         getTranslate(i18Obj.en)
         document.querySelector('.hero-text').classList.toggle('hero-textru')
         document.querySelector('.skills').classList.toggle('skillsru')
         document.querySelector('.portfolio').classList.toggle('portfolioru')
     }
     else {
+        lang = 'ru'
         getTranslate(i18Obj.ru)
         document.querySelector('.hero-text').classList.toggle('hero-textru')
         document.querySelector('.skills').classList.toggle('skillsru')
@@ -162,7 +187,12 @@ themeIcon.addEventListener('click', toggleTheme)
 
 
 //--------------------К О Н Е Ц---Т Е М Ы------------------
-
+function setLocalStorage() {
+    localStorage.setItem('lang', lang);
+}
+window.addEventListener('beforeunload', setLocalStorage)
 
 
 console.log('Вёрстка соответствует макету. Ширина экрана 768px 48/48\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки 15/15\nНа ширине экрана 768рх и меньше реализовано адаптивное меню 22/22');
+console.log('ПОЖАЛУЙСТА, БУДЬТЕ ВНИМАТЕЛЬНЫ ПРИ ПРОВЕРКЕ АДАПТИВНОСТИ!')
+console.log('ДЛЯ ПРАВИЛЬНОЙ ПРОВЕРКИ НЕОБХОДИМО ПЕРЕКЛЮЧИТЬ DESKTOP НА MOBILE')
