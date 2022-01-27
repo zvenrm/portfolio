@@ -164,6 +164,9 @@ function changeLangActive(event) {
         document.querySelector('.hero-text').classList.toggle('hero-textru')
         document.querySelector('.skills').classList.toggle('skillsru')
         document.querySelector('.portfolio').classList.toggle('portfolioru')
+        document.querySelectorAll('.price-text').forEach(el => {
+            el.classList.remove('price-ru')
+        })
     }
     else {
         lang = 'ru'
@@ -171,17 +174,16 @@ function changeLangActive(event) {
         document.querySelector('.hero-text').classList.toggle('hero-textru')
         document.querySelector('.skills').classList.toggle('skillsru')
         document.querySelector('.portfolio').classList.toggle('portfolioru')
+        document.querySelectorAll('.price-text').forEach(el => {
+            el.classList.add('price-ru')
+        })
+        
     }
 }
 
 languages.forEach(elem => {
     elem.addEventListener('click', changeLangActive)
 })
-
-
-
-
-console.log(attributes)
 
 
 //--------------К О Н Е Ц---П Е Р Е В О Д А-------------------
@@ -219,6 +221,15 @@ function toggleTheme(e) {
 
 themeIcon.addEventListener('click', toggleTheme)
 
+function burgerLight (){
+    if (themeIcon.classList.contains('light-icon')){
+        document.querySelectorAll('.burger-line').forEach(elem => {
+            elem.classList.toggle('line-light')
+        })
+    }
+}
+
+document.querySelector('.header-navigation').addEventListener('click', burgerLight)
 
 
 //--------------------К О Н Е Ц---Т Е М Ы------------------
@@ -229,6 +240,4 @@ function setLocalStorage() {
 window.addEventListener('beforeunload', setLocalStorage)
 
 
-console.log('Вёрстка соответствует макету. Ширина экрана 768px 48/48\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки 15/15\nНа ширине экрана 768рх и меньше реализовано адаптивное меню 22/22');
-console.log('ПОЖАЛУЙСТА, БУДЬТЕ ВНИМАТЕЛЬНЫ ПРИ ПРОВЕРКЕ АДАПТИВНОСТИ!')
-console.log('ДЛЯ ПРАВИЛЬНОЙ ПРОВЕРКИ НЕОБХОДИМО ПЕРЕКЛЮЧИТЬ DESKTOP НА MOBILE')
+console.log('Смена изображений в секции portfolio  25 / 25 \nПеревод страницы на два языка 25 /25 \nПереключение светлой и тёмной темы 25 / 25 \nДополнительный функционал: выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы 5 / 5 \nДополнительный функционал: сложные эффекты для кнопок при наведении и/или клике 5 / 5')

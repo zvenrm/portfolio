@@ -1232,6 +1232,10 @@ h1 {
         padding-top: 10px;
         max-width: 300px;
     }
+
+    .price-ru{
+        line-height: 24px;
+    }
 }
 
 @media screen and (max-width: 361px) {
