@@ -75,18 +75,21 @@ body {
     cursor: pointer;
 }
 
+.header-lang {
+    margin-right: 30px;
+}
+
 .header-lang span {
     line-height: 50px;
     font-weight: 700;
 }
 
-.en {
-    color: #BDAE82;
+.lang {
     transition: 0.3s;
 }
 
-.en:hover {
-    /* filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%); */
+.lang:hover {
+    filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;
 }
 
@@ -94,13 +97,28 @@ body {
     padding: 0 3px 0 3px;
 }
 
-.ru {
+.language-active {
+    color: #BDAE82;
+}
+
+.language-active:hover {
+    cursor: pointer;
+}
+
+.dark-icon {
+    width: 45px;
+    height: 45px;
+    background: url("./assets/svg/night-theme.svg") no-repeat;
     transition: 0.3s;
 }
 
-.ru:hover {
+.dark-icon:hover {
     filter: invert(26%) sepia(15%) saturate(649%) hue-rotate(7deg) brightness(94%) contrast(86%);
     cursor: pointer;
+}
+
+.light-icon {
+    background: url("./assets/svg/white-theme.svg") no-repeat;
 }
 
 .header-burger {
@@ -119,6 +137,10 @@ body {
     position: absolute;
     left: 0;
     transition: 0.5s;
+}
+
+.line-light {
+    background-color: #000;
 }
 
 .burger-line1 {
@@ -158,6 +180,15 @@ body {
     z-index: -1;
 }
 
+.title-light {
+    background-color: #fff;
+    color: #000;
+}
+
+.title-light::after {
+    background-color: #000;
+}
+
 .hero-container {
     padding: 160px 20px 330px 80px;
     background-image: url("./assets/img/bg.jpg");
@@ -193,9 +224,15 @@ h1 {
     transition: 0.3s;
 }
 
-.hire-me:hover {
+.hire-me:hover, .hire-me:focus {
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
+}
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #f0d37c}
 }
 
 .skills-container {
@@ -207,6 +244,10 @@ h1 {
 
 .skills {
     width: 152px;
+}
+
+.skillsru {
+    width: 175px;
 }
 
 .skills::after {
@@ -290,6 +331,10 @@ h1 {
     width: 220px;
 }
 
+.portfolioru {
+    width: 255px;
+}
+
 .portfolio::after {
     bottom: 39px;
     left: -240px;
@@ -304,6 +349,7 @@ h1 {
 }
 
 .button {
+    position: relative;
     margin-right: 5px;
     width: 220px;
     height: 55px;
@@ -312,11 +358,86 @@ h1 {
     background: #000;
     text-align: center;
     line-height: 40px;
-    transition: 0.3s;
+    transition: 0.2s ease-in 0.03s, box-shadow ease-in 0.13s;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:before, .button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+.button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 20%, #BDAE82 20%, transparent 30%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 10%, #BDAE82 15%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 10%, #BDAE82 15%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.button:active {
+    transform: scale(0.9);
+    background-color: #f0d37c;
+    box-shadow: 0 2px 25px #f0d37c;
+}
+.button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+}
+.button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
 }
 
 .button:last-child {
     margin-right: 0;
+}
+
+.button-light {
+    background-color: #fff;
+    color: #000;
+}
+
+.button-light:hover {
+    background-color: #BDAE82;
+    color: #fff;
 }
 
 @media (max-width: 935px) {
@@ -330,7 +451,7 @@ h1 {
     cursor: pointer;
 }
 
-.autumn-button {
+.button-active {
     background: #BDAE82;
     color: #000;
 }
@@ -348,6 +469,9 @@ h1 {
 @media screen and (max-width: 1390px) {
     .portfolio-images {
         justify-content: space-around;
+    }
+    .portfolio-image {
+        margin-bottom: 10px;
     }
 } 
 
@@ -459,12 +583,16 @@ h1 {
 
 .price-text {
     margin-top: 20px;
-    font-size: 18px;
     text-align: center;
     line-height: 36px;
 }
 
+.price-text span {
+    font-size: 18px;
+}
+
 .order-button {
+    position: relative;
     margin-top: 40px;
     width: 220px;
     height: 55px;
@@ -472,7 +600,48 @@ h1 {
     background-color: #BDAE82;
     border: 0;
     line-height: 40px;
-    transition: 0.3s;
+    transition: 0.2s ease-in 0.03s, box-shadow ease-in 0.16s;
+}
+
+.order-button:focus {
+    outline: 0;
+}
+
+.order-button:before, .order-button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+.order-button:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 20%, #BDAE82 20%, transparent 30%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 10%, #BDAE82 15%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.order-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 10%, #BDAE82 15%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.order-button:active {
+    transform: scale(0.9);
+    background-color: #f0d37c;
+    box-shadow: 0 2px 25px #f0d37c;
+}
+.order-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+}
+.order-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
 }
 
 .order-button:hover {
@@ -533,6 +702,7 @@ h1 {
 }
 
 .send-message {
+    position: relative;
     width: 220px;
     height: 55px;
     color: #000;
@@ -545,15 +715,19 @@ h1 {
 .send-message:hover {
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
 }
 
 /*-------footer-------*/
+
 .footer-container {
     padding: 0 20px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 150px;
+    background-color: #000;
 }
 
 .year {
@@ -637,6 +811,10 @@ h1 {
     cursor: pointer;
 }
 
+.light-theme {
+    color: #000;
+}
+
 @media screen and (max-width: 768px) {
     .body-hidden {
         overflow: hidden;
@@ -671,9 +849,17 @@ h1 {
         transition: 0.5s;
     }
 
+    .navigation-light {
+        background-color: #fff;
+    }
+
+    .navigation-light a {
+        color: #000;
+    }
+
     .navigation-open {
         transform: translateX(0);
-        box-shadow: -50px 0 200px #000;
+        box-shadow: -100px 0 200px -20px #000;
         overflow: auto;
     }
 
@@ -691,11 +877,15 @@ h1 {
     }
 
     .header-lang {
-        margin-right: 20px;
+        margin-right: 28px;
     }
 
     .slash {
-        margin-right: 10px;
+        margin-right: 5px;
+    }
+
+    .dark-icon {
+        margin-right: 30px;
     }
 
     .header-burger {
@@ -758,6 +948,10 @@ h1 {
         max-width: 390px;
     }
 
+    .hero-textru {
+        margin-bottom: 35px;
+    }
+
     .hire-me {
         margin: 0;
     }
@@ -777,6 +971,10 @@ h1 {
 
     .skills {
         max-width: 131px;
+    }
+
+    .skillsru {
+        max-width: 140px;
     }
 
     .skills::after {
@@ -818,6 +1016,10 @@ h1 {
 
     .portfolio {
         max-width: 185px;
+    }
+
+    .portfolioru {
+        max-width: 200px;
     }
 
     .portfolio::after {
@@ -905,6 +1107,10 @@ h1 {
         margin: 0;
     }
 
+    .price-text span {
+        font-size: 18px;
+    }
+
     .contacts-container {
         padding-top: 50px;
         max-height: 600px;
@@ -928,7 +1134,6 @@ h1 {
 
     .footer-container {
         padding: 28px 0 0 0;
-        max-width: 210px;
         flex-direction: column;
     }
 
@@ -1034,6 +1239,10 @@ h1 {
         padding-top: 10px;
         max-width: 300px;
     }
+
+    .price-ru{
+        line-height: 24px;
+    }
 }
 
 @media screen and (max-width: 361px) {
@@ -1052,4 +1261,8 @@ h1 {
     .input {
         width: 100%;
     }
+}
+
+.light-body {
+    background-color: #fff;
 }
