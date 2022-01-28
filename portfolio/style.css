@@ -1241,6 +1241,9 @@ h1 {
         padding-top: 10px;
         max-width: 300px;
     }
+    .order-button:last-child {
+        margin-top: 30px;
+    }
 
     .price-ru{
         line-height: 24px;
