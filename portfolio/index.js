@@ -61,6 +61,7 @@ function toggleMenu() {
     navigation.classList.toggle('navigation-open');
     document.body.classList.toggle('body-hidden');
 }
+
 hamburger.addEventListener('click', toggleMenu);
 navigation.addEventListener('click', toggleMenu);
 
@@ -238,6 +239,5 @@ function setLocalStorage() {
     localStorage.setItem('theme', theme);
 }
 window.addEventListener('beforeunload', setLocalStorage)
-
 
 console.log('Смена изображений в секции portfolio  25 / 25 \nПеревод страницы на два языка 25 /25 \nПереключение светлой и тёмной темы 25 / 25 \nДополнительный функционал: выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы 5 / 5 \nДополнительный функционал: сложные эффекты для кнопок при наведении и/или клике 5 / 5')

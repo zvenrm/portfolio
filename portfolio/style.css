@@ -217,6 +217,7 @@ h1 {
     width: 220px;
     height: 55px;
     background-color: #BDAE82;
+    color: #000;
     border: 0;
     text-align: center;
     line-height: 40px;
@@ -687,6 +688,12 @@ h1 {
     color: #bdae82;
     font-size: 20px;
 }
+
+.input:hover,
+.input:focus {
+    background: rgba(0, 0, 0, 1);
+}
+
 
 .message-input {
     height: 100px;
