@@ -1165,6 +1165,9 @@ h1 {
 }
 
 @media screen and (max-width: 451px) {
+    .header-navigation.navigation-open {
+        padding-top: 100px;
+    }
     .section-title::after {
         max-width: 250px;
     }
